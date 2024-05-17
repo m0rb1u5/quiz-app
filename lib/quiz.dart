@@ -15,7 +15,7 @@ class _QuizState extends State<Quiz> {
   static const Alignment startAlignment = Alignment.topLeft;
   static const Alignment endAlignment = Alignment.bottomRight;
 
-  Widget activeScreen = const StartScreen();
+  Widget activeScreen = const StartScreen(startQuiz: switchScreen);
 
   void switchScreen() {
     setState(() {
