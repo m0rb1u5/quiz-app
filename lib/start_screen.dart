@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/initial_page.dart';
 
-class GradientContainer extends StatelessWidget {
-  const GradientContainer({required this.colors, super.key});
+class StartScreen extends StatelessWidget {
+  const StartScreen({required this.colors, super.key});
 
-  GradientContainer.purple({super.key}) : colors = [Colors.blue, Colors.purple];
+  StartScreen.purple({super.key}) : colors = [Colors.blue, Colors.purple];
 
   final List<Color> colors;
 
