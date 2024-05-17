@@ -15,7 +15,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return const Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-      Text("Test")
-    ],);
+        Text("Test"),
+      ],
+    );
   }
 }
