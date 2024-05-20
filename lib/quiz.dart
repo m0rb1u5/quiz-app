@@ -15,17 +15,11 @@ class _QuizState extends State<Quiz> {
   static const Alignment startAlignment = Alignment.topLeft;
   static const Alignment endAlignment = Alignment.bottomRight;
 
-  Widget? activeScreen;
-
-  @override
-  void initState() {
-    activeScreen = StartScreen(startQuiz: switchScreen);
-    super.initState();
-  }
+  String activeScreen = 'start-screen';
 
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestionsScreen();
+      activeScreen = 'questions-screen';
     });
   }
 
@@ -41,7 +35,9 @@ class _QuizState extends State<Quiz> {
               end: endAlignment,
             ),
           ),
-          child: activeScreen,
+          child: activeScreen == 'start-screen'
+          ? StartScreen(startQuiz: switchScreen)
+          : const QuestionsScreen(),
         ),
       ),
     );
