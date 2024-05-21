@@ -11,6 +11,7 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   final List<Color> colors = [Colors.blue, Colors.purple];
+  final List<String> selectedAnswers = [];
 
   static const Alignment startAlignment = Alignment.topLeft;
   static const Alignment endAlignment = Alignment.bottomRight;
@@ -23,12 +24,16 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void chooseAnswers(String answer) {
+    selectedAnswers.add(answer);
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget screenWidget = StartScreen(startQuiz: switchScreen);
 
     if (activeScreen == 'questions-screen') {
-      screenWidget = const QuestionsScreen();
+      screenWidget = QuestionsScreen(onSelectedAnswer: chooseAnswers);
     }
 
     return MaterialApp(
