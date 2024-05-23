@@ -4,13 +4,14 @@ import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers, required this.restartQuiz});
+  const ResultsScreen(
+      {super.key, required this.chosenAnswers, required this.restartQuiz});
 
   final List<String> chosenAnswers;
   final void Function() restartQuiz;
 
-  List<Map<String, Object>> getSummaryData() {
-    final List<Map<String, Object>> summary= [];
+  List<Map<String, Object>> get summaryData {
+    final List<Map<String, Object>> summary = [];
 
     for (var i = 0; i < chosenAnswers.length; i++) {
       summary.add({
@@ -26,11 +27,12 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, Object>> summaryData = getSummaryData();
     final int numTotalQuestions = questions.length;
-    final int numCorrectQuestions = summaryData.where((data) {
-      return data['user_answer'] == data['correct_answer'];
-    },).length;
+    final int numCorrectQuestions = summaryData
+        .where(
+          (data) => data['user_answer'] == data['correct_answer'],
+        )
+        .length;
 
     return SizedBox(
       width: double.infinity,
