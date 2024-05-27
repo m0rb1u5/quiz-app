@@ -1,4 +1,4 @@
-# Flutter
+# Flutter: Quiz App
 
 ## Pre-requirements
 
@@ -17,7 +17,11 @@
    - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) (required).
    - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) (optional).
    - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) (optional).
-4. [Install Android Studio 2023.1 (Hedgehog) or major](https://developer.android.com/studio/install). During the install process or if installed, install the next components::
+4. Install Android Studio. In this step, we have two options:
+   - If you want to have compatibility with [Genymotion](https://www.genymotion.com/): [Install Android Studio Iguana | 2023.2.1 Patch 2 or minor](https://developer.android.com/studio/archive) (open the link in english language).
+   - Other cases: [Install Android Studio Koala | 2024.1.1 or major](https://developer.android.com/studio).
+
+   During the install process or if installed, install the next components::
    - Android SDK Platform, API 34.0.0.
    - Android SDK Command-line Tools.
    - Android SDK Build-Tools.
@@ -25,6 +29,7 @@
    - Android Emulator.
 5. Install some plugins in Android Studio:
    - [Flutter](https://plugins.jetbrains.com/plugin/9212-flutter).
+   - [Genymotion](https://plugins.jetbrains.com/plugin/7269-genymotion) (just to Android Studio Iguana | 2023.2.1 Patch 2 or minor).
 6. [Install Genymotion Desktop](https://www.genymotion.com/product-desktop/download/).
 7. Install Flutter SDK. For this step, you can follow the next options (the first one is recommended):
    - [Use VS Code to install Flutter](https://docs.flutter.dev/get-started/install/windows/mobile?tab=vscode#use-vs-code-to-install-flutter).
@@ -36,11 +41,11 @@ Comments:
 
 ## Configuration
 
-1. Configurate a Android device. It is possible configurate a virtual or physical device:
-   - [Set up the Android emulator: Using Genymotion](https://docs.genymotion.com/desktop/Get_started/014_Basic_steps/).
-     - [Install Open GApps](https://support.genymotion.com/hc/en-us/articles/4414586104977-How-to-install-Google-Play-Store-and-other-Google-Apps-in-Genymotion)
-   - [Set up the Android emulator: Using Android Studio](https://docs.flutter.dev/get-started/install/windows/mobile?tab=virtual#set-up-the-android-emulator).
-   - [Set up your target Android device](https://docs.flutter.dev/get-started/install/windows/mobile?tab=physical#set-up-your-target-android-device).
+1. Configurate a Android device:
+   - [Set up a Android emulator: Using Genymotion](https://docs.genymotion.com/desktop/Get_started/014_Basic_steps/) (recommended option):
+     - [Install Open GApps](https://support.genymotion.com/hc/en-us/articles/4414586104977-How-to-install-Google-Play-Store-and-other-Google-Apps-in-Genymotion).
+   - [Set up a Android emulator: Using Androd Studio](https://docs.flutter.dev/get-started/install/windows/mobile?tab=virtual#set-up-the-android-emulator).
+   - [Set up a real Android device](https://docs.flutter.dev/get-started/install/windows/mobile?tab=physical#set-up-your-target-android-device).
 2. To verify if all components of a complete Flutter development environment were installed, run the following command: `flutter doctor`. The result of your command should resemble:
 
    ```bash
@@ -60,7 +65,7 @@ Comments:
    ! Doctor found issues in 2 categories.
    ```
 
-3. [Install dependencies]([Adding a package dependency to an app](https://docs.flutter.dev/packages-and-plugins/using-packages#adding-a-package-dependency-to-an-app)). For this step, run the following command on the root project: `flutter pub get`.
+3. [Install dependencies](https://docs.flutter.dev/packages-and-plugins/using-packages#adding-a-package-dependency-to-an-app). For this step, run the following command on the root project: `flutter pub get`.
 4. Open the project on the IDE. You can use Visual Studio Code or Android Studio (the first one is recommended).
 
 ## Run and Debug
