@@ -1,4 +1,4 @@
-# Flutter: Quiz App
+# Flutter: Expense Tracker App
 
 ## Pre-requirements
 
@@ -17,7 +17,10 @@
    - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) (required).
    - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) (optional).
    - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) (optional).
-4. Install Android Studio. In this step, we have two options:
+4. [Install Rosetta 2](https://support.apple.com/en-us/102527) (just to macOS with Apple silicon): `sudo softwareupdate --install-rosetta --agree-to-license`
+5. [Install Xcode 15](https://developer.apple.com/xcode/) (just to macOS).
+6. [Install CocoaPods 1.15 or major](https://cocoapods.org/) (just to macOS).
+7. Install Android Studio. In this step, we have two options:
    - If you want to have compatibility with [Genymotion](https://www.genymotion.com/): [Install Android Studio Iguana | 2023.2.1 Patch 2 or minor](https://developer.android.com/studio/archive) (open the link in english language).
    - Other cases: [Install Android Studio Koala | 2024.1.1 or major](https://developer.android.com/studio).
 
@@ -27,13 +30,14 @@
    - Android SDK Build-Tools.
    - Android SDK Platform-Tools.
    - Android Emulator.
-5. Install some plugins in Android Studio:
+8. Install some plugins in Android Studio:
    - [Flutter](https://plugins.jetbrains.com/plugin/9212-flutter).
    - [Genymotion](https://plugins.jetbrains.com/plugin/7269-genymotion) (just to Android Studio Iguana | 2023.2.1 Patch 2 or minor).
-6. [Install Genymotion Desktop](https://www.genymotion.com/product-desktop/download/).
-7. Install Flutter SDK. For this step, you can follow the next options (the first one is recommended):
-   - [Use VS Code to install Flutter](https://docs.flutter.dev/get-started/install/windows/mobile?tab=vscode#use-vs-code-to-install-flutter).
-   - [Download then install Flutter](https://docs.flutter.dev/get-started/install/windows/mobile?tab=download#download-then-install-flutter).
+9. [Install Genymotion Desktop](https://www.genymotion.com/product-desktop/download/).
+10. Install Flutter SDK. For this step, you can follow the next options (the first one is recommended):
+
+    - [Use VS Code to install Flutter](https://docs.flutter.dev/get-started/install/windows/mobile?tab=vscode#use-vs-code-to-install-flutter).
+    - [Download then install Flutter](https://docs.flutter.dev/get-started/install/windows/mobile?tab=download#download-then-install-flutter).
 
 Comments:
 
@@ -46,27 +50,27 @@ Comments:
      - [Install Open GApps](https://support.genymotion.com/hc/en-us/articles/4414586104977-How-to-install-Google-Play-Store-and-other-Google-Apps-in-Genymotion).
    - [Set up a Android emulator: Using Androd Studio](https://docs.flutter.dev/get-started/install/windows/mobile?tab=virtual#set-up-the-android-emulator).
    - [Set up a real Android device](https://docs.flutter.dev/get-started/install/windows/mobile?tab=physical#set-up-your-target-android-device).
-2. To verify if all components of a complete Flutter development environment were installed, run the following command: `flutter doctor`. The result of your command should resemble:
+2. Configurate a iOS device (just to macOS):
+   - [Set up a iOS simulator](https://docs.flutter.dev/get-started/install/macos/mobile-ios?tab=virtual#configure-your-target-ios-device).
+   - [Set up a real iOS device](https://docs.flutter.dev/get-started/install/macos/mobile-ios?tab=physical#configure-your-target-ios-device).
+3. To verify if all components of a complete Flutter development environment were installed, run the following command: `flutter doctor`. The result of your command should resemble:
 
    ```bash
-   Running flutter doctor...
    Doctor summary (to see all details, run flutter doctor -v):
-   [✓] Flutter (Channel stable, 3.19.6, on Microsoft Windows 11 [Version 10.0.22621.3155], locale en)
-   [✓] Windows version (Installed version of Windows is version 10 or higher)
-   [✓] Android toolchain - develop for Android devices (Android SDK version 34.0.5)
-   [!] Chrome - develop for the web
-   [!] Visual Studio - develop Windows apps
-   [✓] Android Studio (version 2023.3)
-   [✓] VS Code (version 1.89)
-   [✓] Connected device (1 available)
+   [✓] Flutter (Channel stable, 3.22.1, on macOS 14.4.1 23E224 darwin-arm64, locale pt-BR)
+   [✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+   [✓] Xcode - develop for iOS and macOS (Xcode 15.0)
+   [✓] Chrome - develop for the web
+   [✓] Android Studio (version 2023.2)
+   [✓] VS Code (version 1.89.1)
+   [✓] Connected device (3 available)
    [✓] Network resources
 
-
-   ! Doctor found issues in 2 categories.
+   • No issues found!
    ```
 
-3. [Install dependencies](https://docs.flutter.dev/packages-and-plugins/using-packages#adding-a-package-dependency-to-an-app). For this step, run the following command on the root project: `flutter pub get`.
-4. Open the project on the IDE. You can use Visual Studio Code or Android Studio (the first one is recommended).
+4. [Install dependencies](https://docs.flutter.dev/packages-and-plugins/using-packages#adding-a-package-dependency-to-an-app). For this step, run the following command on the root project: `flutter pub get`.
+5. Open the project on the IDE. You can use Visual Studio Code or Android Studio (the first one is recommended).
 
 ## Run and Debug
 

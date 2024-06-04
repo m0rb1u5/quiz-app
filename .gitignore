@@ -20,7 +20,7 @@ captures/
 output.json
 
 # IntelliJ
-*.iml
+#.iml
 .idea/
 misc.xml
 deploymentTargetDropDown.xml
@@ -284,9 +284,9 @@ fastlane/test_output
 iOSInjectionProject/
 
 ### SwiftPackageManager ###
-Packages
-xcuserdata
-*.xcodeproj
+# Packages
+# xcuserdata
+# *.xcodeproj
 
 
 ### SwiftPM ###
@@ -368,7 +368,7 @@ $RECYCLE.BIN/
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
-**/xcshareddata/WorkspaceSettings.xcsettings
+# **/xcshareddata/WorkspaceSettings.xcsettings
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -510,7 +510,7 @@ fabric.properties
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+#[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -893,7 +893,7 @@ FodyWeavers.xsd
 migrate_working_dir/
 
 # IntelliJ related
-*.iml
+#*.iml
 *.ipr
 *.iws
 .idea/
