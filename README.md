@@ -1,4 +1,4 @@
-# Flutter: Expense Tracker App
+# Flutter: Quiz App
 
 ## Pre-requirements
 
